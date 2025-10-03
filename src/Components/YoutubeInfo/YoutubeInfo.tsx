@@ -14,7 +14,7 @@ interface ChannelSnippet {
   };
 }
 
-const DEUBT_DATE = new Date("2024-03-21");
+const DEBUT_DATE = new Date("2024-03-21");
 
 const calcDaySince = (startDate: Date): number => {
   const today = new Date();
@@ -79,7 +79,7 @@ const YoutubeInfo: React.FC = () => {
         ) : (
           <p className="yt-loading">載入中...</p>
         )}
-        <p>出道：{calcDaySince(DEUBT_DATE)} 天</p>
+        <p>出道：{calcDaySince(DEBUT_DATE)} 天</p>
       </a>
     </div>
   );
