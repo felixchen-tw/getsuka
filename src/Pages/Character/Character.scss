@@ -8,11 +8,7 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
-    .character-container {
-        /* Flex constraints handled by width caps in NameCard instead of grid constraints */
-    }
-}
+
 
 @media screen and (max-width: 480px) {
     .character-container {
