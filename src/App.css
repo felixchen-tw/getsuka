@@ -38,39 +38,73 @@ body {
     margin-bottom: 30px;
 }
 
+.vtuber-fan-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0 20px;
+    align-items: stretch;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.vtuber-wrapper, .fan-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 /* More Info Section */
 .more-info-container {
-    margin: 30px 0;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1vw;
-    padding: 0 20px;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    justify-content: center;
 }
 
 .more-info-container a {
     text-decoration: none;
-    flex: 0 1 20vw;
-    text-align: center;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    transition: opacity 0.3s;
+}
 
-    &:hover {
-        opacity: 80%;
-    }
+.more-info-container a:hover {
+    opacity: 0.8;
 }
 
 .more-info-container img {
     width: 100%;
-    height: auto;
-    border-radius: 20px 20px 0 0 ;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
 }
 
-.more-info-container p {
-    text-align: center;
-    font-size: clamp(0.875rem, 2vw, 1rem);
+.more-info-container p.card-header {
+    background: #fb5a38;
     color: white;
-    background-color: #fb5a38;
-    padding: 10px;
-    border-radius: 0 0 20px 20px;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(40px, 5vh, 50px);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
 }
 
 /* Media Queries */
@@ -79,14 +113,14 @@ body {
         margin-top: 80px;
     }
 
-    .more-info-container {
+    .vtuber-fan-wrapper {
         flex-direction: column;
-        align-items: center;
+        padding: 0;
+        gap: 0;
     }
 
     .more-info-container a {
-        width: 100%;
-        max-width: 300px;
+        max-width: 220px;
     }
 }
 
@@ -95,7 +129,15 @@ body {
         font-size: 14px;
     }
 
-    .more-info-container p {
+    .more-info-container p.card-header {
         font-size: 1rem;
+    }
+
+    .more-info-container {
+        padding: 10px;
+    }
+
+    .more-info-container a {
+        max-width: 180px;
     }
 }

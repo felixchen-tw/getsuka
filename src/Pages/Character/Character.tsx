@@ -1,25 +1,21 @@
 import './Character.scss'
 import NameCard from './NameCard/NameCard';
 
-import mama from '../../assets/mama.jpg';
-import aka from '../../assets/AKA.jpg';
-import nami from '../../assets/nami.png';
-
 const characterData = [
     {
         info: '繪師麻麻：貓柳吟葉',
         link: 'https://x.com/bacon_rotg',
-        img: mama,
+        img: 'https://unavatar.io/twitter/bacon_rotg',
     },
     {
         info: 'Live2D：AKA',
         link: 'https://x.com/akafireinlive2d',
-        img: aka,
+        img: 'https://unavatar.io/twitter/akafireinlive2d',
     },
     {
         info: '3D：娜米老公',
         link: 'https://x.com/NamiHusband_1',
-        img: nami,
+        img: 'https://unavatar.io/twitter/NamiHusband_1',
     }
 ];
 

@@ -31,14 +31,14 @@ function App() {
           </div>
           <Media />
           <YoutubeInfo />
-          <div>
-            <Vtuber />
+          <div className="vtuber-fan-wrapper">
+            <div className="vtuber-wrapper">
+              <Vtuber />
+            </div>
+            <div id="fan" className="fan-wrapper">
+              <Fan />
+            </div>
           </div>
-        </div>
-      </section>
-      <section id="fan">
-        <div className='fan-container'>
-          <Fan />
         </div>
       </section>
       <section id="member">
@@ -57,16 +57,16 @@ function App() {
         </div>
         <div className='more-info-container'>
           <a href='https://docs.google.com/spreadsheets/d/1sOmeablnN8j1IdqmpXhtWDvST33AsAzPbziVyU6fGj4/edit?usp=drivesdk' target='_blank'>
+            <p className="card-header">玥華小檔案</p>
             <img src={getsukaHappy} alt="更多資訊" />
-            <p>玥華小檔案</p>
           </a>
           <a href='https://p.ecpay.com.tw/5AB9B96' target='_blank'>
+            <p className="card-header">綠界</p>
             <img src={GetsukaEat} alt='綠界' />
-            <p>綠界</p>
           </a>
           <a href='https://gestuka.fandom.com/' target='_blank'>
+            <p className="card-header">Wiki</p>
             <img src={getsukaStar} alt="Wiki" />
-            <p>Wiki</p>
           </a>
         </div>
       </section>
