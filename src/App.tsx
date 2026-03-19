@@ -35,9 +35,9 @@ function App() {
             <div className="vtuber-wrapper">
               <Vtuber />
             </div>
-            <div id="fan" className="fan-wrapper">
-              <Fan />
-            </div>
+          </div>
+          <div id="fan" className="fan-wrapper">
+            <Fan />
           </div>
         </div>
       </section>
