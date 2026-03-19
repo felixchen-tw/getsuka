@@ -18,7 +18,7 @@ body {
 #banner {
     margin-top: 120px;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: clip; /* clip avoids creating a scroll container entirely, so the y-axis stays perfectly unclipped! */
 }
 
 #banner img {
