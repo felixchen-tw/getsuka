@@ -1,6 +1,5 @@
 import './Getsuka.scss'
 
-// import images properly for Vite bundler
 import PLACEHOLDER_CHAR from '../../assets/getsuka.png';
 import MASCOT_IMG from '../../assets/getsuka-mascot.jpg';
 
