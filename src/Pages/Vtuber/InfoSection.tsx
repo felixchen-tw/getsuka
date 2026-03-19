@@ -1,5 +1,6 @@
 import React from 'react';
 import MASCOT_IMG from '../../assets/getsuka-mascot.jpg';
+import { Media } from '../Media/Media';
 
 const InfoSection: React.FC = () => {
   return (
@@ -43,6 +44,9 @@ const InfoSection: React.FC = () => {
 別人話說一半、恐遊、恐怖片、鬼故事</span>
             </div>
           </div>
+        </div>
+        <div className="info-media-wrapper">
+          <Media />
         </div>
       </div>
     </section>
