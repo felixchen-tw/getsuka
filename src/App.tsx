@@ -9,8 +9,6 @@ import Media from './Pages/Media';
 import YoutubeInfo from './Components/YoutubeInfo';
 import Footer from './Components/Footer'
 
-
-import getsukaSetup from './assets/getsuka-setup.jpg'
 import GetsukaEat  from './assets/getsuka-eat.png'
 import getsukaStar from './assets/getsuka-star.png'
 import getsukaHappy from './assets/getsuka-happy.png'
@@ -21,9 +19,6 @@ function App() {
       <div className='navbar-container'>
         <Navbar />
       </div>
-      <section id="banner">
-        <img src={getsukaSetup} alt='getsuka-setup' />
-      </section>
       <section id ="intro">
         <div className='intro-container'>
           <div>
