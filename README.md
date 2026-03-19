@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+# Getsuka (玥華) Unofficial Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An unofficial fan website dedicated to the VTuber **Getsuka (玥華)**. This project serves as a hub for her profile information, related links, and other details.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository is built with modern web technologies:
 
-## Expanding the ESLint configuration
+- **React**
+- **TypeScript**
+- **Vite** (for fast development and bundling)
+- **Sass (SCSS)** (for styling)
+- **Bootstrap 5** (via CDN for layout utilities)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Character Profile**: Detailed layout showcasing character information and tags.
+- **Responsive Layout**: Fully optimized Responsive Web Design (RWD) for seamless viewing on both desktop and mobile devices.
+- **Custom UI Components**: Includes features like an interactive navigation bar and structured information sections.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## License and Disclaimer
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This is an unofficial fanmade project. All character rights, images, and original assets belong to their respective creators and owners.
