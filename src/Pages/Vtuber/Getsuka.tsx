@@ -1,8 +1,8 @@
 import './Getsuka.scss'
 
-// placeholders for images
-const PLACEHOLDER_CHAR = "src/assets/getsuka.png";
-const MASCOT_IMG = "src/assets/getsuka-mascot.jpg";
+// import images properly for Vite bundler
+import PLACEHOLDER_CHAR from '../../assets/getsuka.png';
+import MASCOT_IMG from '../../assets/getsuka-mascot.jpg';
 
 function Getsuka() {
     return(
