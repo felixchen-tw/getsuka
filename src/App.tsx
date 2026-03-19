@@ -5,7 +5,6 @@ import Title from './Components/Title';
 import Vtuber from './Pages/Vtuber';
 import Fan from './Pages/Fan';
 import Character from './Pages/Character';
-import Media from './Pages/Media';
 import YoutubeInfo from './Components/YoutubeInfo';
 import Footer from './Components/Footer'
 
@@ -24,13 +23,12 @@ function App() {
           <div>
             <Title text='介紹' />
           </div>
-          <Media />
-          <YoutubeInfo />
           <div className="vtuber-fan-wrapper">
             <div className="vtuber-wrapper">
               <Vtuber />
             </div>
           </div>
+          <YoutubeInfo />
           <div id="fan" className="fan-wrapper">
             <Fan />
           </div>

@@ -32,7 +32,7 @@ function Media() {
                         </a>
                     </li>
                     <li>
-                        <a href='https://www.twitch.tv/getsuka1008' target='_blank'>
+                        <a href='https://www.twitch.tv/getsukav' target='_blank'>
                             <img src={twitch} alt='twitch' />
                             <span>Twitch</span>
                         </a>

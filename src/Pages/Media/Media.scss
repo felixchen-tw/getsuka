@@ -1,97 +1,114 @@
+$primary-color: #fb5a38;
+
 .media-container {
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 
     ul {
         list-style: none;
         margin: 0;
-        padding: 2rem;
+        padding: 0;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 4rem;
-        height: 80px;
-        max-width: 80vw;
-        background-color: white;
-        border-radius: 40px;
+        gap: 1.5rem;
     }
 
     li {
-        display: inline-block;
-        text-align: center;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border: 2px solid $primary-color; /* Hollow circular border */
+        background-color: transparent; /* Makes it hollow */
+        transition: all 0.3s ease;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    li a:hover {
+        background-color: rgba(251, 90, 56, 0.08); /* Soft fill on hover */
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(251, 90, 56, 0.15); /* Halo glow */
     }
 
     img {
-        width: 2rem;
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
         transition: transform 0.3s ease;
     }
 
-    img:hover {
-        transform: scale(1.1);
-    }
-
+    /* Tooltip styling */
     span {
         visibility: hidden;
-        font-size: 12px;
-        width: 5rem;
-        background-color: rgb(255, 229, 203);
-        color: #000;
+        opacity: 0;
+        font-size: 13px;
+        font-weight: bold;
+        white-space: nowrap;
+        background-color: $primary-color;
+        color: white;
         text-align: center;
         border-radius: 6px;
-        padding: 8px 0;
+        padding: 6px 12px;
         position: absolute;
-        z-index: 1;
+        bottom: 110%; /* Place above the circle */
         left: 50%;
-        transform: translateX(-50%);
-        top: 2rem;
-        margin-top: 10px;
-        transition: visibility 0.3s ease, transform 0.3s ease;
+        transform: translateX(-50%) translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 10;
+        pointer-events: none;
+
+        /* Little triangle for tooltip */
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $primary-color transparent transparent transparent;
+        }
     }
 
     li:hover span {
         visibility: visible;
-        transform: translateX(-50%) scale(1.1);
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
 }
 
 @media screen and (max-width: 768px) {
     .media-container {
         ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            height: auto;
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 90vw;
+            gap: 1.2rem;
+        }
+
+        li a {
+            width: 55px;
+            height: 55px;
         }
 
         img {
-            width: 2.5rem;
+            width: 26px;
+            height: 26px;
         }
 
         span {
-            display: none;
-            transform: none;
-        }
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .media-container {
-        ul {
-            gap: 1.5rem;
-            padding: 1.5rem;
-        }
-        
-        img {
-            width: 2rem;
-        }
-
-        span {
-            display: none;
+            display: none; /* Hide tooltips on mobile */
         }
     }
 }
