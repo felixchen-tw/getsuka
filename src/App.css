@@ -14,22 +14,10 @@ body {
     width: 100%;
 }
 
-/* Banner */
-#banner {
-    margin-top: 120px;
-    width: 100vw;
-    overflow-x: clip; /* clip avoids creating a scroll container entirely, so the y-axis stays perfectly unclipped! */
-}
-
-#banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
 
 /* Containers */
 .intro-container, .member-container {
+    margin-top: 5vh;
     margin-bottom: 30px;
     padding: 0;
 }
@@ -73,7 +61,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     margin: 0 auto;
     position: relative;
     transition: opacity 0.3s;
