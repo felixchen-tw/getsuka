@@ -47,7 +47,7 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     date: '2024/10/08',
-    title: '第一次生日',
+    title: '生日 1st',
     url: 'https://youtu.be/PH21IBya5AE',
   },
   {
@@ -80,7 +80,7 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     date: '2025/10/08',
-    title: '生日二週年',
+    title: '生日 2nd',
     url: 'https://youtu.be/_3s_GLR5ar0',
   },
   {
@@ -95,6 +95,6 @@ export const timelineEvents: TimelineEvent[] = [
   },
   {
     date: '2026/03/21',
-    title: '出道三週年',
+    title: '出道二週年',
   }
 ];
