@@ -152,13 +152,10 @@ $text-light: #f5f5f5;
   font-size: 0.9rem;
   letter-spacing: 1px;
   border-radius: 8px;
-  box-shadow: 0 4px 0 #d94223;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .hero-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 0 #d94223;
 }
 
 .hero-intro {
@@ -273,6 +270,53 @@ $text-light: #f5f5f5;
   }
 }
 
+/* --- Floating Logo Element (Hat style Reference) --- */
+.floating-logo-container {
+  position: absolute;
+  top: 25%; 
+  right: 8%; /* On the right side below the EN title for desktop */
+  width: clamp(100px, 12vw, 150px);
+  height: clamp(100px, 12vw, 150px); /* Explicit height to guarantee a perfect circle */
+  z-index: 15; /* Float above everything so it matches the reference */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float-logo 4s ease-in-out infinite alternate;
+  pointer-events: none; /* Allows clicks to pass through if it overlaps anything */
+
+  @media (max-width: 1024px) {
+    top: auto;
+    bottom: 40%; /* Lower area on mobile/vertical layout */
+    right: auto;
+    left: 5%; /* Move to the left side */
+    width: clamp(90px, 20vw, 120px);
+    height: clamp(90px, 20vw, 120px);
+  }
+}
+
+.floating-logo-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: $primary-color; /* Solid thematic circle background like reference */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Subtle shadow for the circle itself */
+  z-index: 1;
+}
+
+.floating-logo-img {
+  position: relative;
+  z-index: 2;
+  width: 95%; /* Makes the logo pop out of the circle */
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3)); /* prominent drop shadow on the object */
+}
+
+@keyframes float-logo {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
+}
+
 
 /* --- Info Section --- */
 .custom-info-section {
@@ -285,8 +329,14 @@ $text-light: #f5f5f5;
   /* Reduced padding to bring the content closer to the curved top edge */
   padding-top: clamp(60px, 5vh, 150px); 
   margin: 0 auto;
+  width: 80%;
   max-width: 1200px;
   padding-bottom: 5vh;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    border-radius: 40px 40px 0 0;
+  }
 }
 
 .info-header {
@@ -317,7 +367,7 @@ $text-light: #f5f5f5;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(2.5rem, 7vw, 9rem); /* Bigger but still fits within viewport */
+  font-size: clamp(2rem, 5.5vw, 6.5rem); /* Scaled down to fit perfectly inside the new 80% width container */
   font-weight: 900;
   color: #f0f0f0;
   z-index: 1;
