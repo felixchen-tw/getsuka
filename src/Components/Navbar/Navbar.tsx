@@ -41,6 +41,9 @@ function Navbar() {
                         <NavbarLink text="相關人物" link="#member" />
                     </div>
                     <div className="nav-item" onClick={handleLinkClick}>
+                        <NavbarLink text="活動紀錄" link="#timeline-section" />
+                    </div>
+                    <div className="nav-item" onClick={handleLinkClick}>
                         <NavbarLink text="其他" link="#other-info" />
                     </div>
                 </div>
