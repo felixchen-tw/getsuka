@@ -62,6 +62,9 @@ function App() {
       </section>
       
       <section id="timeline-section">
+        <div>
+          <Title text='活動紀錄' />
+        </div>
         <Timeline />
       </section>
 

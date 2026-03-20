@@ -17,10 +17,6 @@ const Timeline: React.FC = () => {
 
   return (
     <div className="timeline-wrapper">
-      <div className="timeline-title-wrapper">
-        <h2 className="timeline-header">重大歷程</h2>
-      </div>
-      
       {/* Show more button at the top if there are older events hidden */}
       {hasMore && !isExpanded && (
         <div className="timeline-toggle-wrapper top">
