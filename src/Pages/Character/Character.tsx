@@ -3,7 +3,7 @@ import NameCard from './NameCard/NameCard';
 
 const characterData = [
     {
-        info: '繪師麻麻：貓柳吟葉',
+        info: '繪師：貓柳吟葉',
         link: 'https://x.com/bacon_rotg',
         img: 'https://unavatar.io/twitter/bacon_rotg',
     },
