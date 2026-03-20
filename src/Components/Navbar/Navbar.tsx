@@ -41,7 +41,7 @@ function Navbar() {
                         <NavbarLink text="相關人物" link="#member" />
                     </div>
                     <div className="nav-item" onClick={handleLinkClick}>
-                        <NavbarLink text="更多資訊" link="#more-info" />
+                        <NavbarLink text="其他" link="#other-info" />
                     </div>
                 </div>
             </div>
