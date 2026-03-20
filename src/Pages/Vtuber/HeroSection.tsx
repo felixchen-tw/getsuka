@@ -16,9 +16,9 @@ const HeroSection: React.FC = () => {
           <div className="desktop-zh bg-title-style">玥華</div>
           <div className="hero-tags">
             <span className="hero-tag">金魚</span>
+            <span className="hero-tag">大小姐</span>
             <span className="hero-tag">溫柔</span>
             <span className="hero-tag">雜談</span>
-            <span className="hero-tag">突發系</span>
           </div>
           <div className="hero-intro">
             <p>是隻世界上比較聰明的金魚！</p>
