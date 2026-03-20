@@ -12,7 +12,7 @@ $text-light: #f5f5f5;
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1400px;
+  max-width: 1ㄋ00px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -41,7 +41,6 @@ $text-light: #f5f5f5;
   @media (max-width: 1024px) {
     height: auto;
     min-height: 100vh;
-    padding-top: 100px; /* Ensure space from the fixed navbar */
   }
 }
 
@@ -115,7 +114,7 @@ $text-light: #f5f5f5;
   z-index: 10;
 
   .desktop-zh {
-    font-size: clamp(5rem, 12vw, 10.5rem); /* Stop growing when container max-width 1400px is hit */
+    font-size: clamp(5rem, 12vw, 10.5rem); /* Stop growing when container max-width is hit */
     margin-bottom: 50px; /* Space between title and tags */
   }
 
@@ -299,8 +298,9 @@ $text-light: #f5f5f5;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: $primary-color; /* Solid thematic circle background like reference */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Subtle shadow for the circle itself */
+  background: #ffffff; /* White background prevents clashing with the orange logo */
+  border: 4px solid $primary-color; /* Matching the site's flat 3D theme */
+  box-shadow: 0 8px 0 rgba(251, 90, 56, 0.25);
   z-index: 1;
 }
 
@@ -309,7 +309,6 @@ $text-light: #f5f5f5;
   z-index: 2;
   width: 95%; /* Makes the logo pop out of the circle */
   height: auto;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3)); /* prominent drop shadow on the object */
 }
 
 @keyframes float-logo {

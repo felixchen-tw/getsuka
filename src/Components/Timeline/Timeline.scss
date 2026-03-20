@@ -1,0 +1,159 @@
+$primary-color: #fb5a38;
+$bg-color: #ffffff;
+$shadow-color: #d94223;
+$text-dark: #333333;
+$text-light: #777777;
+
+.timeline-wrapper {
+  max-width: 800px;
+  margin: 20px auto 60px auto;
+  padding: 0 20px;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 30px; 
+  margin-left: 10px;
+
+  /* Vertical absolute line */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 0px; /* line anchored at 0 */
+    width: 4px;
+    background-color: rgba($primary-color, 0.3);
+    border-radius: 4px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* The dot on the timeline */
+.timeline-node {
+  position: absolute;
+  left: -38px; /* Offset: padding(30) + node_center(8) = 38px */
+  top: 15px; 
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $bg-color;
+  border: 4px solid $primary-color;
+  box-shadow: 0 0 0 4px rgba($bg-color, 0.8);
+  z-index: 2;
+}
+
+/* Base style for the card */
+.timeline-card {
+  display: block; /* ensure block level for <a> vs <div> */
+  background-color: $bg-color;
+  border: 4px solid $primary-color;
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: $text-dark;
+  position: relative;
+  overflow: hidden;
+  
+  /* Initial flat 3D shadow */
+  box-shadow: 0 6px 0 $shadow-color;
+  transition: all 0.2s ease;
+}
+
+/* Specific styling for clickable cards */
+.clickable-card {
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 0 $shadow-color;
+    /* Optional: subtle background change */
+    background-color: #fff9f8;
+  }
+
+  &:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 2px 0 $shadow-color;
+  }
+}
+
+.event-date {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.event-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.link-icon {
+  color: #aaa;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.clickable-card:hover .link-icon {
+  color: $primary-color; /* Highlights the icon when the card is hovered */
+}
+
+/* Expansion Toggle Buttons */
+.timeline-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  
+  &.top { margin-bottom: 30px; }
+  &.bottom { margin-top: 30px; }
+}
+
+.timeline-toggle-btn {
+  background-color: #fff;
+  color: $primary-color;
+  border: 3px solid $primary-color;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba($primary-color, 0.4);
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 rgba($primary-color, 0.4);
+    background-color: $bg-color;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba($primary-color, 0.4);
+  }
+}
+
+/* Responsive constraints */
+@media (max-width: 480px) {
+  .timeline-card {
+    padding: 15px 20px;
+  }
+  
+  .event-title {
+    font-size: 1.1rem;
+  }
+}
