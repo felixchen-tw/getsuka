@@ -1,11 +1,12 @@
 import './App.css'
 
 // import Navbar from './Components/Navbar';
+// import YoutubeInfo from './Components/YoutubeInfo';
 import Title from './Components/Title';
 import Vtuber from './Pages/Vtuber';
 import Fan from './Pages/Fan';
 import Character from './Pages/Character';
-// import YoutubeInfo from './Components/YoutubeInfo';
+import Timeline from './Components/Timeline/Timeline';
 import Footer from './Components/Footer'
 
 
@@ -59,6 +60,11 @@ function App() {
           </a>
         </div>
       </section>
+      
+      <section id="timeline-section">
+        <Timeline />
+      </section>
+
       <Footer />
     </div>
   );
