@@ -13,7 +13,7 @@ const characterData = [
         img: 'https://unavatar.io/twitter/akafireinlive2d',
     },
     {
-        info: '3D：娜米老公',
+        info: 'VRC：娜米老公',
         link: 'https://x.com/NamiHusband_1',
         img: 'https://unavatar.io/twitter/NamiHusband_1',
     }
