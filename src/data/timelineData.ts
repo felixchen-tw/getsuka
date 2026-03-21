@@ -96,5 +96,6 @@ export const timelineEvents: TimelineEvent[] = [
   {
     date: '2026/03/21',
     title: '出道二週年',
+    url: 'https://youtu.be/8xB-AyxXypQ',
   }
 ];
