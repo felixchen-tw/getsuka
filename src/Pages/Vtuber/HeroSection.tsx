@@ -1,6 +1,6 @@
 import React from 'react';
 import PLACEHOLDER_CHAR from '../../assets/getsuka.png';
-import LOGO_IMG from '../../assets/getsuka-logo.png';
+import FISH_IMG from '../../assets/Getsuka-image.png';
 
 const HeroSection: React.FC = () => {
   return (
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
         {/* Floating Logo Element */}
         <div className="floating-logo-container">
           <div className="floating-logo-bg"></div>
-          <img src={LOGO_IMG} alt="Getsuka Logo" className="floating-logo-img" />
+          <img src={FISH_IMG} alt="Getsuka Fish" className="floating-logo-img" />
         </div>
       </div>
     </section>

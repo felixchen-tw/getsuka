@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MASCOT_IMG from '../../assets/getsuka-mascot.jpg';
 import { Media } from '../Media/Media';
 
 const InfoSection: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+  const email = "getsuka1008@gmail.com";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   return (
     <section className="custom-info-section">
       <div className="info-header">
@@ -45,6 +55,19 @@ const InfoSection: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className="contact-email-wrapper">
+          <button onClick={handleCopy} className="contact-email-btn" style={{ cursor: 'pointer', fontFamily: 'inherit', outline: 'none' }}>
+            {copied ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fb5a38" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            )}
+            <span style={{ minWidth: '235px', textAlign: 'center' }}>
+              {copied ? '已複製到剪貼簿！' : `聯絡信箱：${email}`}
+            </span>
+          </button>
+        </div>
+        
         <div className="info-media-wrapper">
           <Media />
         </div>
