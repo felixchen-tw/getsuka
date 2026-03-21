@@ -1,7 +1,5 @@
 import './App.css'
-
 import Navbar from './Components/Navbar';
-// import YoutubeInfo from './Components/YoutubeInfo';
 import Title from './Components/Title';
 import Vtuber from './Pages/Vtuber';
 import Fan from './Pages/Fan';
@@ -22,7 +20,6 @@ function App() {
               <Vtuber />
             </div>
           </div>
-          {/* <YoutubeInfo /> */}
           <div id="fan" className="fan-wrapper">
             <Fan />
           </div>
