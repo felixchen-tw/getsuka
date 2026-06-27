@@ -97,5 +97,10 @@ export const timelineEvents: TimelineEvent[] = [
     date: '2026/03/21',
     title: '出道二週年',
     url: 'https://youtu.be/8xB-AyxXypQ',
+  },
+  {
+    date: '2026/05/28',
+    title: '首次午安台',
+    url: 'https://www.youtube.com/live/H28OZ4vYy1E?si=mF4TZiMeMog4BDcX'
   }
 ];
